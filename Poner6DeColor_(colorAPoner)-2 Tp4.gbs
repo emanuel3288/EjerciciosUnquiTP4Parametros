@@ -1,0 +1,23 @@
+program {
+    
+    Poner6DeColor_(Azul)
+    Poner6DeColor_(Rojo)
+    Poner6DeColor_(Negro)
+    Poner6DeColor_(Verde)
+    
+    
+} 
+
+
+//Ejercicio 2
+procedure Poner6DeColor_(colorAPoner) {
+    /*
+    PROPOSITO:     -Pone 6 bolitas de color **colorAPoner** en la celda actual.
+    PRECONDICION:  -Ninguno.
+    PARAMETROS:    -**colorAPoner**: Color. Indíca el color de las bolitas a poner en la celda actual.
+    */
+    repeat(6){
+        Poner(colorAPoner)
+    }
+}
+

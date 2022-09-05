@@ -1,0 +1,50 @@
+
+program {
+    //Escribí fecha de mi cumpleaños-
+    EscribirFechaConDía_Mes_Año_(28, 6, 1990)
+}
+
+// si no aclara donde finaliza el cabezal o si no dice nada, volver el cabezal al inicio de donde salio.
+
+procedure EscribirFechaConDía_Mes_Año_(día, mes, año) {
+    /*
+    PROPOSITO:     -Escribir **día** de **mes** de **año** desde la celda actual hacia las dos celdas próximas al este.
+    PRECONDICION:  -Deben existir al menos dos celdas al este de la celda actual.
+                   -Deben estar vacias las celdas en donde se escribirá la fecha.
+    PARAMETROS:    -**día**: Numero.Indíca el numero del día de la fecha a escribir.
+                   -**mes**: Numero.Indća el mes de la fecha a escribir.
+                   -**año**: Numero.Indíca el año de la fecha a escribir.
+    OBSERVACIONES: -Las bolitas azules representa el día, las rojas el mes y las verdes el año de la fecha a escribir. 
+    */
+    Poner_DeColor_(día, Azul)
+    Mover(Este)
+    Poner_DeColor_(mes, Rojo)
+    Mover(Este)
+    Poner_DeColor_(año, Verde)
+    Mover_VecesAl_(2  , Oeste)
+
+}
+
+procedure Poner_DeColor_(cantidadAPoner, colorAPoner) {
+  /*
+  PROPOSITO:    -Poner **cantidadAPoner** de color **colorAPoner** en la celda actual.
+  PRECONDICION: -Ninguna.
+  PARAMETROS:   -**cantidadAPoner**: Numero.Indíca la cantidad de bolitas a poner.
+                -**colorAPoner**:    Color. Indíca el color de la/s bolita/s a poner.
+  */
+  repeat(cantidadAPoner) {
+    Poner(colorAPoner)
+  }
+}
+
+procedure Mover_VecesAl_(cantidadAMover, direcciónAMover) {
+  /*
+  PROPOSITO:    -Posiciona el cabezal **cantidadAMover** celdas en la dirección **direcciónAMover**.
+  PRECONDICION: -Deben existir al menos **cantidadAMover** celdas al **direcciónAMover** de la celda actual.
+  PARAMETROS:   -**cantidadAMover**:   -Numero.   Indíca la cantidad de veces que se va a mover el cabezal.
+                -**direcciónAMover**:  -Dirección.Indíca la dirección en la que el cabezal se deberá mover.
+  */
+  repeat(cantidadAMover) {
+    Mover(direcciónAMover)
+  }
+}

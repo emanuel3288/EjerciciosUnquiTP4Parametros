@@ -1,0 +1,30 @@
+program {
+    
+    Mover3VecesAl_(Este)
+    
+} 
+
+/*
+a. ¿Qué hay que hacer ahora para mover el cabezal tres veces al Norte?
+b. ¿Qué beneficios trae el uso de parámetros?
+c. ¿Cuántos procedimientos puedo ahorrarme haciendo un único procedimiento con un
+parámetro?
+*/
+
+//Ejercicio 1
+procedure Mover3VecesAl_(direcciónAMover) {
+    /*
+    PROPOSITO:     -Mover el cabezal de la posición actual tres celdas hacia la dirección **direcciónAMover**.
+    PRECONDICION:  -Deben existir al menos tres celdas en la dirección **direcciónAMover**.
+    PARAMETROS:    -**direcciónAMover**: Dirección. Indíca la dirección en la que se moverá el cabezal.
+    */
+    repeat(3){
+        Mover(direcciónAMover)
+    }
+}
+
+/*
+A-Para mover el cabezal 3 veces hacia el norte hay que: Mover(direcciónAMover)-Mover(direcciónAMover)-Mover(direcciónAMover).
+B-El uso de parámetros ayuda a desacoplar el código, ayuda a que sea fácil de modificar.
+C-Puedo ahorrarme hasta 4 procedimientos simples ya que cada uno lo haría para un cuadrante diferente.
+*/

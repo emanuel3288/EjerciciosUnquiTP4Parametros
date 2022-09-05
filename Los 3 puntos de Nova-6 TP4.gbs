@@ -1,0 +1,85 @@
+program {
+    //Pintar3PuntosAzules()
+    Pintar3Puntos_(Rojo)
+}
+
+
+//A-Escribir el contrato faltante y corregir las malas prácticas:
+procedure Pintar3PuntosAzules() {
+    /*
+    PROPOSITO:    -Pintar tres bolitas azules en total desde la celda actual hacia el este. 
+    PRECONDICION: -Deben existir al menos 6 celdas al este de la celda inicial.
+                  -Las celdas con bolitas azules estarán a tres celdas de distancia entre sí.
+    OBSERVACIÓN:  -Cada celda a distancia tres solo puede tener una bolita azul pintada.
+    */
+    Poner(Azul)
+    Poner_ADistancia3Al_(Azul, Este)
+    Poner_ADistancia3Al_(Azul, Este)
+    Mover3VecesAl_(Oeste) 
+    Mover3VecesAl_(Oeste)
+}
+
+//B-Ayudar a Nova a contestar la siguiente pregunta: ¿Hay alguna relación entre los parámetros de
+//Poner_ADistancia3Al_ y Mover3VecesAl_?
+
+//RESOLUCION B
+//La relación que existe es que en ambos casos el cabezal se mueve 3 veces hacia la dirección dada.
+
+
+
+//c-Dado que Nova no pensó en código general, basándose en el procedimiento corregido recién,
+//generalizarlo para que, dado un color colorPunto, dibuje los puntos de ese color. El nuevo
+//procedimiento debe llamarse Pintar3Puntos_
+
+
+
+procedure Poner_ADistancia3Al_(colorAPoner, direcciónDondePoner) {
+    /*
+    PROPOSITO:    -Pone un bolita de color **colorAPoner** a tres celdas en la direccion **direcciónDondePoner**.
+    PRECONDICION: -Deben existir al menos tres celdas hacia la dirección **direcciónAPoner**.
+    PARAMETROS:   -**colorAPoner**:         -Color.Indíca el color de la bolita a poner.
+                  -**direcciónDondePoner**: -Dirección. Indíca la dirección en la que se pondrá la bolita.
+    */
+    Mover3VecesAl_(direcciónDondePoner) 
+    Poner(colorAPoner) 
+}
+
+procedure Mover3VecesAl_(direcciónAMover) {
+    /*
+    PROPOSITO:     -Mover el cabezal de la posición actual tres celdas hacia la dirección **direcciónAMover**.
+    PRECONDICION:  -Deben existir al menos tres celdas en la dirección **direcciónAMover**.
+    PARAMETROS:    -**direcciónAMover**: Dirección. Indíca la dirección en la que se moverá el cabezal.
+    */
+    repeat(3){
+        Mover(direcciónAMover)
+    }
+}
+
+////Resolucion C  // generalizo el procedimiento-------------MUY IMPORTANTE.
+procedure Pintar3Puntos_(colorDelPunto) {
+    /*
+    PROPOSITO:    -Pintar tres bolitas de color **colorDelPunto** en total desde la celda actual hacia el este. 
+    PRECONDICION: -Deben existir al menos 6 celdas al este de la celda inicial.
+                  -Las celdas con bolitas azules estarán a tres celdas de distancia entre sí.
+    PARÁMETROS:   -**colorDelPunto**: Color. Indíca el color del punto a poner.
+    OBSERVACIÓN:  -Cada celda a distancia tres solo puede tener una bolita azul pintada.
+    */
+    Poner(colorDelPunto)                         //saco el valor "azul" y le pongo "color" para poder reemplezar el parametro por cualquier color.
+    Poner_ADistancia3Al_(colorDelPunto, Este)    //saco el valor "azul" y le pongo "color" para poder reemplezar el parametro por cualquier color.
+    Poner_ADistancia3Al_(colorDelPunto, Este)    //saco el valor "azul" y le pongo "color" para poder reemplezar el parametro por cualquier color.
+    Mover3VecesAl_(Oeste) 
+    Mover3VecesAl_(Oeste)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

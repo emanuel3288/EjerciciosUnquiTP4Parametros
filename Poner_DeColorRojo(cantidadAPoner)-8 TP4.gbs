@@ -1,0 +1,31 @@
+
+/*
+8. Y ahora, muchas Rojas
+Escribir un procedimiento Poner_DeColorRojo(cantidadAPoner) que dado un número
+cantidadAPoner, ponga tantas bolitas como se indica de color Rojo en la celda actual.
+a. ¿Cuántos casos posibles habría que considerar si no se usarán parámetros en este caso o el
+anterior?
+*/
+
+/*
+A-Se deberían considerar al menos 4 casos diferentes(colores de las bolitas).
+*/
+
+program {
+    Poner_DeColorRojo(100)
+}
+
+procedure Poner_DeColorRojo(cantidadAPoner) {
+    /*
+    PROPOSITO:     -Poner **cantidadAPoner** de color rojo en la celda actual.
+    PRECONDICION:  -Ninguna.
+    PARAMETROS:    -**cantidadAPoner**: Numero. Indica la cantidad de bolitas rojas a poner en la celda actual.
+    OBSERVACION:   -La cantidad a poner debe ser > 0.
+    */
+    repeat(cantidadAPoner) {
+        Poner(Rojo)
+    }
+}
+
+
+

@@ -1,0 +1,93 @@
+/*Multi Arcoiris
+Utilizando el procedimiento Pintar3Puntos_ definido en el ejercicio anterior, construir el
+procedimiento PintarArcoIris() que ponga el tablero de la derecha cuando el tablero inicial es el
+de la izquierda. ¡A no ser como Nova, y empezar escribiendo el contrato!
+*/
+
+program {
+    PintarArcoIris()
+}
+
+procedure PintarArcoIris() {
+    /*
+    PROPOSITO:    -Pintar desde la celda actual un arcoiris de 7 celdas de ancho y una de alto.
+    PRECONDICION: -Deben existir al menos 6 celdas al este y una al norte de la celda actual.
+                  -Las celdas donde se pintará el arcoiris deben estar vacias.
+    OBSERVACION:  -El arcoiris está compuesto tres bolitas de cada color.
+    */
+    Pintar3Puntos_(Negro)
+    IrALaSiguienteFranjaDeColorDelArcoiris()
+    Pintar3Puntos_(Azul)
+    IrALaSiguienteFranjaDeColorDelArcoiris()
+    Pintar3Puntos_(Rojo)
+    
+    
+}
+
+
+procedure Pintar3Puntos_(colorDelPunto) {
+    /*
+    PROPOSITO:    -Pintar tres bolitas de color **colorDelPunto** en total desde la celda actual hacia el este. 
+    PRECONDICION: -Deben existir al menos 6 celdas al este de la celda inicial.
+                  -Las celdas con bolitas azules estarán a tres celdas de distancia entre sí.
+    PARÁMETROS:   -**colorDelPunto**: Color. Indíca el color del punto a poner.
+    OBSERVACIÓN:  -Cada celda a distancia tres solo puede tener una bolita azul pintada.
+    */
+    Poner(colorDelPunto)                         //saco el valor "azul" y le pongo "color" para poder reemplezar el parametro por cualquier color.
+    Poner_ADistancia3Al_(colorDelPunto, Este)    //saco el valor "azul" y le pongo "color" para poder reemplezar el parametro por cualquier color.
+    Poner_ADistancia3Al_(colorDelPunto, Este)    //saco el valor "azul" y le pongo "color" para poder reemplezar el parametro por cualquier color.
+    Mover3VecesAl_(Oeste) 
+    Mover3VecesAl_(Oeste)
+    
+}
+
+procedure IrALaSiguienteFranjaDeColorDelArcoiris() {
+    /*
+    PROPOSITO:    -Posiciona el cabezal en el inicio de la siguiente franja de color del arcoiris.
+    PRECONDICION: -Debe existir al menos una celda al este de la celda actual.
+    */
+    Mover(Este)
+}
+
+procedure VolverAlInicioDelArcoiris() {
+    /*
+    PROPOSITO:    -Posiciona el cabezal en el inicio de la franja anterior de color del arcoiris.
+    PRECONDICION: -Debe existir al menos una celda al oeste de la celda actual.
+    */
+    Mover(Oeste)
+    Mover(Oeste)
+}
+
+
+
+
+procedure Poner_ADistancia3Al_(colorAPoner, direcciónDondePoner) {
+    /*
+    PROPOSITO:    -Pone un bolita de color **colorAPoner** a tres celdas en la direccion **direcciónDondePoner**.
+    PRECONDICION: -Deben existir al menos tres celdas hacia la dirección **direcciónAPoner**.
+    PARAMETROS:   -**colorAPoner**:         -Color.Indíca el color de la bolita a poner.
+                  -**direcciónDondePoner**: -Dirección. Indíca la dirección en la que se pondrá la bolita.
+    */
+    Mover3VecesAl_(direcciónDondePoner) 
+    Poner(colorAPoner) 
+}
+
+procedure Mover3VecesAl_(direcciónAMover) {
+    /*
+    PROPOSITO:     -Mover el cabezal de la posición actual tres celdas hacia la dirección **direcciónAMover**.
+    PRECONDICION:  -Deben existir al menos tres celdas en la dirección **direcciónAMover**.
+    PARAMETROS:    -**direcciónAMover**: Dirección. Indíca la dirección en la que se moverá el cabezal.
+    */
+    repeat(3){
+        Mover(direcciónAMover)
+    }
+}
+
+
+
+
+
+
+
+
+

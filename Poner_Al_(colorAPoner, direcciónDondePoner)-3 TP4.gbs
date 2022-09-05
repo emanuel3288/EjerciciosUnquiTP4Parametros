@@ -1,0 +1,48 @@
+
+
+program {
+    Poner_Al_(Verde, Este)
+    Poner_Y_Al_(Rojo, Azul, Norte)
+}
+
+procedure Poner_Al_(colorAPoner, direcciónDondePoner) {
+    /*
+    PROPOSITO:     -Poner una bolita de color **colorAPoner** en la celda lindante al **direcciónDondePoner**.
+    PRECONDICION:  -Debe existir al menos la celda lindante al **direcciónAPoner**.
+    PARAMETROS:    -**colorAPoner**:          -Color.Indíca el color de la bolita a poner.
+                   -**direcciónDondePoner**:  -Dirección. Indíca la dirección en la que se pondrá la bolita.
+    */
+    Mover(direcciónDondePoner)
+    Poner(colorAPoner)
+}
+
+//Consignas
+/*
+a. ¿Cuántos casos distintos habría que considerar si no se usarán parámetros en este caso?
+b. ¿Cómo debería invocar al procedimiento para que ponga una bolita Azul en la celda al Norte?
+c. ¿Y sí quisiera una Azul y una Roja?
+*/
+
+//Resolucion
+/*
+A-Al menos había 16 casos distintos si no se usaran parámetros. Es decir, para que pueda poner un bolita de un color determinado en los cuatro cuadrantes.
+B-Le deberíamos pasar como argumentos Azul y luego Norte en ese orden.
+C-Debería agregar un nuevo parámetro del tipo color para poder poner una segunda bolita de otro color.
+*/
+
+
+procedure Poner_Y_Al_(primerColorAPoner, segundoColorAPoner, direcciónDondePoner) {
+    /*
+    PROPOSITO:     -Poner una de color **primerColorAPoner** y otra de color **segundoColorAPoner** en la celda lindante al **direcciónDondePoner**.
+    PRECONDICION:  -Deben existir al menos una celda lindante en la dirección **direcciónAPoner**.
+                   -El primer color dado debe ser distinto del segundo color dado. 
+    PARAMETROS:    -**primerColorAPoner**:    -Color.Indíca el primer color a poner en la direccion dada.
+                   -**segundoColorAPoner**:   -Color.Indíca el segundo color a poner en la direccion dada.
+                   -**direcciónDondePoner**:  -Dirección.Indíca la dirección en donde se pondrán las bolitas dadas.
+    */
+    Mover(direcciónDondePoner)
+    Poner(primerColorAPoner)
+    Poner(segundoColorAPoner)
+}
+
+
