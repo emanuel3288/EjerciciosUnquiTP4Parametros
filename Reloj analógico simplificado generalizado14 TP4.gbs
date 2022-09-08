@@ -1,0 +1,72 @@
+/*InPr - P2. Procedimientos y Estrategias de Solución
+Utilizar el comando DibujarRelojAnalógicoSimplificado() en un tablero inicial vacío de 5x5
+con la celda inicial en el centro del mismo, */
+
+program {
+    DibujarRelojAnalógicoSimplificadoDeRadio_(1)
+}
+
+procedure DibujarRelojAnalógicoSimplificadoDeRadio_(radio) {
+    /*
+    PROPOSITO:    -Dibujar reloj analogico de 5 celdas de lado con su cabezal en el centro del mismo.
+    PRECONDICION: -Deben existir al menos 5 celdas de lado.
+                  -Las celdas deben estar vacias.
+    */
+    Mover__Veces(radio, Este)
+    DibujarLaHora3()
+    Mover__Veces(radio, Oeste)
+    Mover__Veces(radio, Sur)
+    DibujarLaHora6()
+    Mover__Veces(radio, Norte)
+    Mover__Veces(radio, Oeste)
+    DibujarLaHora9()
+    Mover__Veces(radio, Este)
+    Mover__Veces(radio, Norte)
+    DibujarLaHora12()
+    Mover__Veces(radio, Sur)
+
+}
+
+procedure DibujarLaHora12(){
+    /*
+    PROPOSITO:    -Dibujar la hora 12 en el reloj analogico.
+    PRECONDICION: -La celda actual estar vacia.
+    */
+    repeat(12) {
+        Poner(Rojo)
+    }
+}
+procedure DibujarLaHora9(){
+    /*
+    PROPOSITO:    -Dibujar la hora 9 en el reloj analogico.
+    PRECONDICION: -La celda actual estar vacia.
+    */
+    repeat(9) {
+        Poner(Rojo)
+    }
+}
+procedure DibujarLaHora6(){
+    /*
+    PROPOSITO:    -Dibujar la hora 6 en el reloj analogico.
+    PRECONDICION: -La celda actual estar vacia.
+    */
+    repeat(6) {
+        Poner(Rojo)
+    }
+}
+procedure DibujarLaHora3() {
+    /*
+    PROPOSITO:    -Dibujar la hora 3 en el reloj analogico.
+    PRECONDICION: -La celda actual estar vacia.
+    */
+    repeat(3) {
+        Poner(Rojo)
+    }
+}
+
+procedure Mover__Veces(cantidad, direccion) {
+    
+    repeat(cantidad) {
+        Mover(direccion)
+    }
+}

@@ -1,0 +1,85 @@
+
+
+program {
+    
+    DibujarInicialDelNombre()
+    IrASiguienteInicial()
+    DibujarInicialDelApellido()
+}
+procedure DibujarInicialDelNombre() {
+    DibujarLineaDeLargo_Al_(5, Norte)
+    Volver_Al_(6, Sur)
+    IrAlInicioDeLasLineasHorizontales()
+    DibujarLineasHorizontalesDeInicialE()
+}
+
+//1-
+procedure DibujarLineaDeLargo_Al_(longitud, direccion) {
+    /*
+    */
+    repeat(longitud-1) {
+        Poner(Verde)
+        Mover(direccion)
+    }
+    Poner(Verde)
+}
+
+procedure Volver_Al_(longitud, direccion) {
+    repeat(longitud-2) {
+        Mover(direccion)
+    }
+}
+procedure IrAlInicioDeLasLineasHorizontales() {
+    Mover(Este)
+}
+
+procedure DibujarLineasHorizontalesDeInicialE() {
+    repeat(2) {
+        DibujarLineaDeLargo_Al_(3, Este)
+        Volver_Al_(4, Oeste)
+        IrAProximaLineaHorizontalDeInicialE()
+    }
+    DibujarLineaDeLargo_Al_(3, Este)
+}
+
+procedure IrAProximaLineaHorizontalDeInicialE() {
+    Mover_VecesAl_(2,Norte)
+}
+//2-
+procedure IrASiguienteInicial() {
+    Mover_VecesAl_(4, Sur)
+    Mover_VecesAl_(3, Este)
+}
+
+procedure Mover_VecesAl_(cantidadAMover, direcciónAMover) {
+  /*
+  PROPOSITO:    -Posiciona el cabezal **cantidadAMover** celdas en la dirección **direcciónAMover**.
+  PRECONDICION: -Deben existir al menos **cantidadAMover** celdas al **direcciónAMover** de la celda actual.
+  PARAMETROS:   -**cantidadAMover**:   -Numero.   Indíca la cantidad de veces que se va a mover el cabezal.
+                -**direcciónAMover**:  -Dirección.Indíca la dirección en la que el cabezal se deberá mover.
+  */
+  repeat(cantidadAMover) {
+    Mover(direcciónAMover)
+  }
+}
+
+//3- Dibujar inicial del apellido
+procedure DibujarInicialDelApellido() {
+    DibujarLineaDeLargo_Al_(4, Este)
+    Volver_Al_(5, Oeste)
+    IrALinea__DeLaInicialDelApellido(Oeste,Norte)
+    DibujarLineaDeLargo_Al_(3, Norte)
+    IrALinea__DeLaInicialDelApellido(Norte,Este)
+    DibujarLineaDeLargo_Al_(4, Este)
+    
+}
+
+
+procedure IrALinea__DeLaInicialDelApellido(direccion1,direccion2) {
+    Mover(direccion1)
+    Mover(direccion2)
+}
+
+
+
+

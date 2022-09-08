@@ -1,0 +1,113 @@
+
+
+program {
+
+}
+
+procedure Poner_Semillas(cantidadDeSemillasAPoner) {
+    /*
+    Proposito:     - Pone **cantidadDeSemillasAPoner** semillas en la parcela actual.  
+    Precondicion:  - Ninguna.
+    Parametros:    -**cantidadDeSemillasAPoner**: Numero. Indíca la cantidad de semillas a poner en la parcela actual.
+    */
+    
+}
+procedure Sacar_Semillas(cantidadDeSemillasASacar) {
+    /*
+    Proposito:    - Saca **cantidadDeSemillasASacar** semillas de la parcela actual.
+    Precondicion: - Debe/n existir al menos **cantidadDeSemillasASacar** en la parcela actual.
+    Parametros:   -**cantidadDeSemillasASacar**: Numero. Indíca la cantidad de semillas a sacar de la celda actual.
+    */
+    
+}
+procedure Poner_Árboles(cantidadDeÁrbolesAPoner) {
+    /*
+    Proposito:   - Pone **cantidadDeÁrbolesAPoner** arbol/es en la parcela actual.
+    Precondicion:- Ninguna.
+    Parametros:  -**cantidadDeÁrbolesAPoner**: Numero. Indíca la cantidad de arboles a poner en la parcela actual.
+    */
+    
+}
+procedure Sacar_Árboles(cantidadDeÁrbolesASacar) {
+    /*
+    Proposito:   - Saca **cantidadDeÁrbolesASacar** arbol/es de la parcela actual.
+    Precondicion:- Debe/n existir al menos **cantidadDeÁrbolesASacar** en la parcela actual.
+    Parametros:  -**cantidadDeÁrbolesASacar**: Numero. Indíca la cantidad de arboles a sacar de la parcela actual.
+    */
+    
+}
+procedure Poner_Nutrientes(cantidadDeNutrientesAPoner) {
+    /*
+    Proposito:   - Pone **cantidadDeNutrientesAPoner** nutriente/s en la celda actual.
+    Precondicion:- Ninguna.
+    Parametros:  - **cantidadDeNutrientesAPoner**: Numero. Indíca la cantidad de nutriente/s a poner en la celda actual.
+    */
+    
+}
+procedure Sacar_Nutrientes(cantidadDeNutrientesASacar) {
+    /*
+    Proposito:   -Saca **cantidadDeNutrientesASacar** nutriente/s de la celda actual.
+    Precondicion:-Debe/n existir al menos **cantidadDeNutrientesASacar** nutrientes en la celda actual.
+    Parametros:  -**cantidadDeNutrientesASacar**: Numero. Indíca la cantidad de nutrientes a sacar de la parcela actual.
+    */
+    
+}
+
+procedure PonerUnaSemilla(){
+    /*
+    PROPOSITO:    -Poner una semilla en la parcela actual.
+    PRECONDICION: -La parcela debe estar vacia.
+    */
+    Poner(Rojo)
+
+}
+
+procedure PonerUnÁrbol() {
+    /*
+    PROPOSITO:    -Poner un arbol en la parcela actual.
+    PRECONDICION: -La parcela debe estar vacia.
+    */
+    Poner(Verde)
+}
+procedure PonerUnaBomba() {
+    /*
+    PROPOSITO:    -Poner una bomba en la parcela actual.
+    PRECONDICION: -La parcela debe estar vacia.
+    */
+    Poner(Negro)
+}
+procedure PonerUnNutriente() {
+    /*
+    PROPOSITO:    -Poner una nutriente en la parcela actual.
+    PRECONDICION: -La parcela debe estar vacia.
+    */
+    Poner(Azul)
+}
+procedure SacarUnaSemilla() {
+    /*
+    PROPOSITO:    -Sacar un nutriente de la parcela actual.
+    PRECONDICION: -Debe existir al menos una semilla en la parcela actual.
+    */
+    Sacar(Rojo)
+}
+procedure SacarUnÁrbol() {
+    /*
+    PROPOSITO:    -Sacar un arbol de la parcela actual.
+    PRECONDICION: -Debe existir al menos un arbol en la parcela actual.
+    */
+    Sacar(Verde)
+}
+procedure SacarUnaBomba() {
+    /*
+    PROPOSITO:    -Sacar una bomba de la parcela actual.
+    PRECONDICION: -Debe existir al menos una bomba en la parcela actual.
+    */
+    Sacar(Negro)
+}
+procedure SacarUnNutriente() {
+    /*
+    PROPOSITO:    -Sacar un nutriente de la parcela actual.
+    PRECONDICION: -Debe existir al menos un nutriente en la parcela actual.
+    */
+    Sacar(Azul)
+}
