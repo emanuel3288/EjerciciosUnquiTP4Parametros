@@ -24,7 +24,7 @@ procedure EscribirFechaConDía_Mes_Año_(día, mes, año) {
     Mover_VecesAl_(2  , Oeste)
 
 }
-
+// Trate de generalizar.
 procedure Poner_DeColor_(cantidadAPoner, colorAPoner) {
   /*
   PROPOSITO:    -Poner **cantidadAPoner** de color **colorAPoner** en la celda actual.
